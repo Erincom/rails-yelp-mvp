@@ -1,0 +1,20 @@
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <%= simple_form_for([@restaurant, @review]) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <%= f.input :content %>
+          <%= f.input :rating, collection: 0..5 %>
+        </div>
+
+        <div class="form-actions text-center">
+          <%= f.button :submit, class: "btn btn-new" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
